@@ -1,3 +1,6 @@
 {
+  "compilerOptions": {
+    "moduleSuffixes": [".android", ".ios", ""]
+  },
   "extends": "@tsconfig/react-native/tsconfig.json"
 }
