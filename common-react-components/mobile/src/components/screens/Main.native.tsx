@@ -1,5 +1,5 @@
 import { Text } from 'react-native';
-import StandardLayout from '../common/StandardLayout.native';
+import StandardLayout from '../common/Layouts/StandardLayout.native';
 import CustomList from '../common/List/CustomList.native';
 import SelectableListItem from '../common/List/SelectableListItem.native';
 

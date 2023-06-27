@@ -1,6 +1,6 @@
 import { Text } from 'react-native';
-import { FontType } from '../../../../shared/config/Font/FontType';
-import defaultStyle from '../../../../shared/config/Font/FontStyle';
+import { FontType } from '../Styles/Font/FontType';
+import defaultStyle from '../Styles/Font/FontStyle.android';
 
 interface StyledTextProps {
   text: string;
@@ -11,7 +11,7 @@ interface StyledTextProps {
 const StyledText: React.FunctionComponent<StyledTextProps> = ({ 
   text, 
   type = 'Heading', 
-  color = 'black' 
+  color = 'black'
 }) => {
   return (
     <Text style={[defaultStyle[type]]}>{text}</Text>

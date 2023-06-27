@@ -9,7 +9,7 @@ const CustomList = ({ children }: CustomListProps) => {
     <ScrollView 
       contentContainerStyle={{ alignItems: 'center', alignSelf: 'center' }}
       
-      style={{ marginRight: 16, marginLeft: 16, padding: 16, backgroundColor: 'blue' }}>
+      style={{ marginRight: 16, marginLeft: 16, padding: 16 }}>
       {children}
     </ScrollView>
   );
