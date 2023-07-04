@@ -1,6 +1,6 @@
 import { Text } from 'react-native';
-import { FontType } from '../Styles/Font/FontType';
-import defaultStyle from '../Styles/Font/FontStyle.android';
+import { FontType } from '../../../styles/Font/FontType';
+import defaultStyle from '../../../styles/Font/FontStyle.android';
 
 interface StyledTextProps {
   text: string;
