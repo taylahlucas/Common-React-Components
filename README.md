@@ -6,3 +6,13 @@ npm start
 
 cd mobile
 npm start
+
+# Packages
+
+- react-native-gesture-handler
+
+## Navigation
+- @react-navigation/native 
+- @react-navigation/native-stack
+- react-native-screens 
+- react-native-safe-area-context
