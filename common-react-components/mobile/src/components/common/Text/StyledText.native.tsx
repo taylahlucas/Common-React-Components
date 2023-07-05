@@ -1,20 +1,25 @@
 import { Text } from 'react-native';
-import { FontType } from '../../../styles/Font/FontType';
-import defaultStyle from '../../../styles/Font/FontStyle.android';
+import { FontType, AlignmentType } from '../../../styles/Font/FontType';
+import defaultStyle from '../../../styles/Font/FontStyle';
 
 interface StyledTextProps {
-  text: string;
+  children: string;
   type?: FontType;
   color?: string;
+  style?: any;
+  align?: AlignmentType;
 }
 
 const StyledText: React.FunctionComponent<StyledTextProps> = ({ 
-  text, 
+  children, 
   type = 'Heading', 
-  color = 'black'
+  color = 'black',
+  style,
+  align = 'center'
 }) => {
+  console.log("HERE:" , defaultStyle[type])
   return (
-    <Text style={[defaultStyle[type]]}>{text}</Text>
+    <Text style={{ ...defaultStyle[type], ...defaultStyle[align], ...style, color: color }}>{children}</Text>
   );
 };
 

@@ -1,4 +1,5 @@
 import { Text, Pressable, TouchableNativeFeedback } from 'react-native';
+import StyledText from '../Text/StyledText.native';
 import listStyles from './ListStyles.native';
 
 interface SelectableListItemProps {
@@ -45,10 +46,9 @@ const SelectableListItem = ({ title, onClick }: SelectableListItemProps) => {
         rippleEffect();
       }}
     >
-      {/* // TODO: Center text and change font type */}
-      <Text style={{ textAlign: 'center' }}>
+      <StyledText type={'ListItemTitle'}>
         {title}
-      </Text>
+      </StyledText>
     </Pressable>
   );
 };

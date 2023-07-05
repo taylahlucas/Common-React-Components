@@ -1,2 +1,5 @@
 export type FontType = 
-  | 'Heading';
+  | 'Heading'
+  | 'ListItemTitle';
+
+export type AlignmentType = 'center' | 'left' | 'right';
