@@ -6,9 +6,11 @@ interface StandardLayoutProps {
 
 const StandardLayout = ({ children }: StandardLayoutProps) => {
   return (
-    <View style={{ width: '100%', height: '100%' }}>
-    {children}
-    </View>
+    <SafeAreaView>
+      <View style={{ width: '100%', height: '100%' }}>
+      {children}
+      </View>
+    </SafeAreaView>
   );
 };
 

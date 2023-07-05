@@ -15,7 +15,7 @@ const Home = () => {
       <Text style={textStyles.headerText}>Custom Components & Animations</Text>
       <ScrollableList>
         <SelectableListItem 
-          title={'test-1'} 
+          title={'Loading Animations'} 
           onClick={(): void => navigation.navigate(ScreenEnum.Loading)}
           style={listItemStyles.selectableButton}
         />
