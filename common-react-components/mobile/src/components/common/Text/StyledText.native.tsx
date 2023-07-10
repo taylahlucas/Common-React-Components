@@ -17,7 +17,6 @@ const StyledText: React.FunctionComponent<StyledTextProps> = ({
   style,
   align = 'center'
 }) => {
-  console.log("HERE:" , defaultStyle[type])
   return (
     <Text style={{ ...defaultStyle[type], ...defaultStyle[align], ...style, color: color }}>{children}</Text>
   );

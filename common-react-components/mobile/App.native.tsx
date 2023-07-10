@@ -1,10 +1,3 @@
-/**
- * Sample React Native App
- *
- * @format
- */
-
-import React from 'react';
 // import {
 //   useColorScheme,
 // } from 'react-native';
