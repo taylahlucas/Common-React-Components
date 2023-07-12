@@ -11,7 +11,7 @@ const Home = () => {
   const navigation = useReactNavigation();
 
   return (
-    <StandardLayout>
+    <StandardLayout showBack={false}>
       <StyledText style={textStyles.headerText}>Custom Components & Animations</StyledText>
       <ScrollableList>
         <SelectableListItem 

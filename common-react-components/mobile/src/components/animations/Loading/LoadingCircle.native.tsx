@@ -19,7 +19,7 @@ const AnimatedLoadingCircle = Animated.createAnimatedComponent(Circle);
 const AnimatedLoadingText = Animated.createAnimatedComponent(TextInput);
 Animated.addWhitelistedNativeProps({ text: true })
 
-const LoadingCircle = ({ width = 50, height = 50, radius = 45, strokeWidth = 5, duration = 2000 }: LoadingCircleProps) => {
+const LoadingCircle = ({ width = 50, height = 50, radius = 45, strokeWidth = 5, duration = 4000 }: LoadingCircleProps) => {
   const circumference = radius * Math.PI * 2;
   const strokeOffset = useSharedValue(circumference);
   const percentage = useSharedValue(0);
@@ -51,7 +51,7 @@ const LoadingCircle = ({ width = 50, height = 50, radius = 45, strokeWidth = 5, 
         strokeOffset.value = 0;
         percentage.value = 0;
       }
-    }, 5000)
+    }, duration * 2)
 
     return () => {
       clearInterval(interval)
