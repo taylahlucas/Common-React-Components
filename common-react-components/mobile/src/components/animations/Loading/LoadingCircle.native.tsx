@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { TextInput } from 'react-native';
 import { Svg, Circle } from 'react-native-svg';
 import Animated, { 
@@ -7,6 +7,7 @@ import Animated, {
   useAnimatedProps, 
   useDerivedValue
 } from 'react-native-reanimated';
+import useSetLoadingCircleInterval from './hooks/useSetLoadingCircleInterval.native';
 
 interface LoadingCircleProps {
   width?: number;
@@ -23,6 +24,8 @@ const LoadingCircle = ({ width = 50, height = 50, radius = 45, strokeWidth = 5, 
   const circumference = radius * Math.PI * 2;
   const strokeOffset = useSharedValue(circumference);
   const percentage = useSharedValue(0);
+  
+  useSetLoadingCircleInterval({ strokeOffset, percentage, duration });
   
   const calculatePercentage = useDerivedValue(() => {
     const number = ((circumference - strokeOffset.value) / (circumference)) * 100;
@@ -42,21 +45,6 @@ const LoadingCircle = ({ width = 50, height = 50, radius = 45, strokeWidth = 5, 
       strokeDashoffset: withTiming(offset, { duration: duration })
     };
   });
-
-  useEffect(() => {
-    strokeOffset.value = 0;
-
-    const interval = setInterval(() => {
-      if (Math.round(percentage.value) === 100) {
-        strokeOffset.value = 0;
-        percentage.value = 0;
-      }
-    }, duration * 2)
-
-    return () => {
-      clearInterval(interval)
-    }
-  }, []);
 
   return (
     <Svg width={width * 2} height={height * 2}>
