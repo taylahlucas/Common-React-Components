@@ -1,6 +1,9 @@
-import { SafeAreaView, View, Button } from 'react-native';
+import { SafeAreaView, View } from 'react-native';
 import useReactNavigation from '../../../navigation/hooks/useReactNavigation.native';
 import IconButton from '../Buttons/IconButton.native';
+import If from '../If.native';
+import Spacing from '../Spacing.native';
+import { layoutStyles } from './LayoutStyles.native'
 
 interface StandardLayoutProps {
   children: any;
@@ -9,12 +12,13 @@ interface StandardLayoutProps {
 
 const StandardLayout = ({ children, showBack = true }: StandardLayoutProps) => {
   const navigation = useReactNavigation();
-
-  // TODO: Move into styles && align heading to top
+  
   return (
     <SafeAreaView>
-      {showBack ? <IconButton name='chevron-back-outline' onPress={(): void => navigation.goBack()} /> : <View style={{ marginTop: 38 }} />}
-      <View style={{ width: '100%', height: '100%' }}>
+      <If condition={showBack} elseChild={<Spacing height={38} />}>
+        <IconButton name='chevron-back-outline' onPress={(): void => navigation.goBack()} />
+      </If>
+      <View style={layoutStyles.container}>
       {children}
       </View>
     </SafeAreaView>

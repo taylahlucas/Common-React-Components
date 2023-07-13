@@ -2,7 +2,6 @@ import StandardLayout from '../components/common/Layouts/StandardLayout.native';
 import ScrollableList from '../components/common/List/ScrollableList';
 import SelectableListItem from '../components/common/List/SelectableListItem.native';
 import listItemStyles from '../components/common/List/ListStyles.native'
-import textStyles from '../components/common/Text/TextStyles.native';
 import useReactNavigation from '../navigation/hooks/useReactNavigation.native';
 import { ScreenEnum } from '../utils/Types';
 import StyledText from '../components/common/Text/StyledText.native';
@@ -12,7 +11,7 @@ const Home = () => {
 
   return (
     <StandardLayout showBack={false}>
-      <StyledText style={textStyles.headerText}>Custom Components & Animations</StyledText>
+      <StyledText>Custom Components & Animations</StyledText>
       <ScrollableList>
         <SelectableListItem 
           title={'Loading Animations'} 
