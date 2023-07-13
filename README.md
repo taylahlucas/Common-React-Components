@@ -13,6 +13,7 @@ npm start
 
 - react-native-gesture-handler
 - react-native-vector-icons && @types/react-native-vector-icons
+- react-native-gifted-charts
 
 ## Navigation
 - @react-navigation/native 

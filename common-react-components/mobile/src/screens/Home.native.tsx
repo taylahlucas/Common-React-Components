@@ -19,8 +19,8 @@ const Home = () => {
           style={listItemStyles.selectableButton}
         />
         <SelectableListItem 
-          title={'test-2'} 
-          onClick={(): void => console.log("HERE")}
+          title={'Charts'} 
+          onClick={(): void => navigation.navigate(ScreenEnum.Charts)}
           style={listItemStyles.selectableButton} 
         />
         <SelectableListItem 

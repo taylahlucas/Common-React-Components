@@ -7,5 +7,6 @@ export interface NativeNavigation {
 
 export enum ScreenEnum {
   Home = 'Home',
-  Loading = 'Loading'
+  Loading = 'Loading',
+  Charts = 'Charts'
 }
