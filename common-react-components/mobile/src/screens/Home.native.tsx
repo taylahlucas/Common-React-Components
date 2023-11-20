@@ -23,11 +23,6 @@ const Home = () => {
           onClick={(): void => navigation.navigate(ScreenEnum.Charts)}
           style={listItemStyles.selectableButton} 
         />
-        <SelectableListItem 
-          title={'test-3'} 
-          onClick={(): void => console.log("HERE")}
-          style={listItemStyles.selectableButton} 
-        />
       </ScrollableList>
     </StandardLayout>
   );
