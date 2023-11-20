@@ -8,6 +8,8 @@ cd mobile
 npm run setup
 npm start
 
+https://github.com/taylahlucas/Common-React-Components/assets/53559103/0f27abe9-62fa-4112-95e9-fa32eeecf0f1
+
 # Packages
 
 - react-native-gesture-handler
